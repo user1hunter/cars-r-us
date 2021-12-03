@@ -1,0 +1,50 @@
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    background-color: burlywood;
+  }
+  
+  h1 {
+    margin-left: 3rem;
+  }
+  
+  h2 {
+    margin: 0 0 2rem 0;
+  }
+  
+  .choices {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .options {
+    margin: 2rem 1rem;
+    padding: 1rem;
+    width: 20rem;
+    border: solid gray 2px;
+    background-color: salmon;
+    border-radius: 10px;
+  }
+
+  #orderButton {
+    width: 10rem;
+    margin-left: 3rem;
+    padding: 1rem;
+    font-size: large;
+    background-color: gray;
+    color: salmon;
+  }
+  
+  .customOrders {
+    margin:  3rem;
+  }
+  
+  .orderItem {
+    list-style-type: none;
+    border: solid green 2px;
+    background-color: gold;
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 75%
+  }
