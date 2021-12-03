@@ -8,7 +8,6 @@ import {
   getOrderBuilder,
   addCustomOrder,
 } from "./database.js";
-import { Paints } from "./Paints.js";
 
 export const Orders = () => {
   const orders = getOrders();
@@ -24,26 +23,25 @@ export const Orders = () => {
 const buildCustomOrder = (order) => {
   const paints = getPaints();
   const interiors = getInteriors();
-  const techs = getTechnologies();
+  const technology = getTechnologies();
   const wheels = getWheels();
   const types = getTypes();
 
-  const orderedPaint = paints.find((paint) => paint.id === order.paintId);
-  const orderedInterior = interiors.find(
-    (interior) => interior.id === order.interiorId
-  );
-  const orderedTech = techs.find((tech) => tech.id === order.techId);
-  const orderedWheel = wheels.find((wheel) => wheel.id === order.wheelId);
-  const orderedType = types.find((type) => type.id === order.typeId);
+  const selectedPaint = paints.find((paint) => paint.id === order.paintId)
+  const selectedInterior = interiors.find((interior) => interior.id === order.interiorId)
+  const selectedTechnology = technology.find((tech) => tech.id === order.techId)
+  const selectedWheels = wheels.find((wheel) => wheel.id === order.wheelId)
+  const selectedType = types.find((type) => type.id === order.typeId)
 
-  const totalCost = (orderedPaint.price + orderedInterior.price + orderedTech.price + orderedWheel.price) * orderedType.price;
-  const costString = totalCost.toLocaleString("en-US", {
+  const totalPrice = (selectedPaint.price + selectedInterior.price + selectedTechnology.price + selectedWheels.price) * selectedType.price;
+  
+  const priceString = totalPrice.toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
   });
-
+  
   return `<li class="orderItem">
-    A ${orderedPaint.color} car with ${orderedWheel.wheelType} wheels, ${orderedInterior.seatType}, and the ${orderedTech.option} costs a total of ${costString}
+    A ${selectedPaint.color} ${selectedType.name} with ${selectedWheels.type} wheels, ${selectedInterior.seatType}, and the ${selectedTechnology.option} costs a total of ${priceString}
   </li>`;
 };
 

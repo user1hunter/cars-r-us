@@ -18,7 +18,7 @@ export const Paints = () => {
 document.addEventListener("change", (event) => {
   if (event.target.id === "paint") {
     const paints = getPaints();
-    const currentId = event.target.value;
+    const currentId = parseInt(event.target.value);
     const currentPaint = paints.find(
       (paint) => paint.id === parseInt(currentId)
     );

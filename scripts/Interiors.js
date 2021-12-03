@@ -18,7 +18,7 @@ export const Interiors = () => {
 document.addEventListener("change", (event) => {
   if (event.target.id === "interior") {
     const interiors = getInteriors();
-    const currentId = event.target.value;
+    const currentId = parseInt(event.target.value);
     const currentInterior = interiors.find(
       (interior) => interior.id === parseInt(currentId)
     );

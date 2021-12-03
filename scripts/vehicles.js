@@ -16,7 +16,7 @@ export const vehicleTypes = () => {
 document.addEventListener("change", (event) => {
     if (event.target.id === "type") {
       const types = getTypes();
-      const currentId = event.target.value;
+      const currentId = parseInt(event.target.value);
       const currentType = types.find((type) => type.id === parseInt(currentId));
       setType(currentId);
     }

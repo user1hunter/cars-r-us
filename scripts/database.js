@@ -73,29 +73,41 @@ const database = {
   wheels: [
     {
       id: 1,
-      wheelType: "17-inch Pair Radial",
+      type: "17-inch Pair Radial",
       price: 0,
     },
     {
       id: 2,
-      wheelType: "17-inch Pair Radial Black",
+      type: "17-inch Pair Radial Black",
       price: 0,
     },
     {
       id: 3,
-      wheelType: "8-inch Pair Spoke Silver",
+      type: "18-inch Pair Spoke Silver",
       price: 0,
     },
     {
       id: 4,
-      wheelType: "18-inch Pair Spoke Black",
+      type: "18-inch Pair Spoke Black",
       price: 0,
     },
   ],
   types: [
-    { id: 1, name: "Car", price: 1 },
-    { id: 2, name: "SUV", price: 1.5 },
-    { id: 3, name: "Truck", price: 2.25 },
+    { 
+      id: 1, 
+      name: "Car", 
+      price: 1 
+    },
+    { 
+      id: 2, 
+      name: "SUV", 
+      price: 1.5 
+    },
+    { 
+      id: 3, 
+      name: "Truck", 
+      price: 2.25 
+    },
   ],
   customOrders: [
     {
